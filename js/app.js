@@ -2,7 +2,7 @@ const form = document.getElementById("formRegistro");
 const mensaje = document.getElementById("mensaje");
 const btn = document.getElementById("btnSubmit");
 
-// VALIDACIONES EN TIEMPO REAL
+
 document.querySelectorAll("input, select").forEach(el => {
     el.addEventListener("input", () => {
         if (el.value.trim() === "") {
