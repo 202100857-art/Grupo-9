@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registro</title>
+<title>Registro de Productos</title>
 <link rel="stylesheet" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,9 +11,6 @@
 
 <header>
     <div class="logo">Grupo 9</div>
-    <div class="user">
-       <span><i class="fa-solid fa-arrow-right-to-bracket"></i>Login</span>
-    </div>
 </header>
 
 <div class="layout">
@@ -22,52 +19,53 @@
     <nav>
         <ul>
             <li><a href="index.html">Dashboard</a></li>
-            <li><a class="active" href="registro.html">Registros</a></li>
-            <li><a href="#">Reportes</a></li>
-            <li><a href="#">Configuración</a></li>
+            <li><a class="active" href="registro.html">Productos</a></li>
         </ul>
     </nav>
 </aside>
 
-<main class="main">
+<main class="main main-center">
 
-<section class="form-container">
-    <h1>Nuevo Registro</h1>
-    <p class="form-subtitle">Complete la información requerida.</p>
+<section class="form-container modern-card">
+    <h1>Nuevo Producto</h1>
+    <p class="form-subtitle">Registra un producto en el sistema</p>
 
-    <form class="modern-form">
+    <div id="mensaje"></div>
 
-        <div class="input-group">
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+    <form id="formRegistro" class="modern-form clean-form">
+
+        <div class="field">
+            <label>Nombre del Producto</label>
+            <input type="text" id="nombre" placeholder="Ej. Laptop HP">
         </div>
 
-        <div class="input-group">
-            <label for="email">Correo Electrónico</label>
-            <input type="email" id="email" placeholder="ejemplo@email.com" required>
+        <div class="field">
+            <label>Tipo</label>
+            <input type="text" id="tipo" placeholder="Ej. Electrónica">
         </div>
 
-        <div class="input-group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" placeholder="809-000-0000">
+        <div class="field">
+            <label>Cantidad</label>
+            <input type="number" id="cantidad" placeholder="Ej. 10">
         </div>
 
-        <div class="input-group">
-            <label for="rol">Rol</label>
-            <select id="rol" required>
-                <option value="">Seleccione</option>
-                <option>Administrador</option>
-                <option>Usuario</option>
-                <option>Supervisor</option>
+        <div class="field">
+            <label>Costo ($)</label>
+            <input type="number" id="costo" placeholder="Ej. 1500">
+        </div>
+
+        <div class="field">
+            <label>En Stock</label>
+            <select id="stock">
+                <option value="">Seleccionar</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
             </select>
         </div>
 
-        <div class="input-group">
-            <label for="mensaje">Observaciones</label>
-            <textarea id="mensaje" rows="4" placeholder="Notas adicionales..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-modern">Guardar Registro</button>
+        <button type="submit" class="btn-modern btn-premium" id="btnSubmit">
+            Guardar Producto
+        </button>
 
     </form>
 </section>
@@ -76,8 +74,10 @@
 </div>
 
 <footer class="footer">
-      <p>© 2026 Grupo 9</p>
+    <p>© 2026 Grupo 9</p>
 </footer>
+
+<script src="js/app.js"></script>
 
 </body>
 </html>

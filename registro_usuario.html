@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Usuario</title>
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+<h2>Crear Cuenta</h2>
+
+<div id="msg"></div>
+
+<form id="formRegister">
+
+<input type="text" id="user" placeholder="Usuario">
+<small id="errorUser"></small>
+
+<input type="password" id="pass" placeholder="Contraseña">
+	
+<small id="errorPass"></small>
+
+<input type="password" id="confirmPass" placeholder="Confirmar contraseña">
+<small id="errorConfirm"></small>
+
+<button type="submit" class="btn-modern">Registrarse</button>
+
+</form>
+
+<a href="login.html">Ya tengo cuenta</a>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
