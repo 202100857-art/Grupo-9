@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-<link rel="stylesheet" href="css/auth.css">
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Grupo 9</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-
-<div class="auth-container">
-
-<h2>Iniciar Sesión</h2>
-
-<div id="msg"></div>
-
-<form id="formLogin">
-
-<input type="text" id="user" placeholder="Usuario">
-<small id="errorUser"></small>
-
-<input type="password" id="pass" placeholder="Contraseña">
-<small id="errorPass"></small>
-
-<button type="submit" class="btn-modern">Entrar</button>
-
-</form>
-
-<a href="registro_usuario.html">Crear cuenta</a>
-
-</div>
-
-<script src="js/auth.js"></script>
+<body class="auth-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card card-glass p-4">
+                    <div class="card-body">
+                        <h2 class="text-white text-center mb-4">
+                            <i class="bi bi-key-fill text-warning me-2"></i>Iniciar Sesión
+                        </h2>
+                        <div id="msg"></div>
+                        <form id="formLogin">
+                            <div class="mb-3">
+                                <label class="form-label text-light">Usuario</label>
+                                <input type="text" id="user" class="form-control form-control-glass" placeholder="Ej. juan123" required>
+                                <div id="errorUser" class="text-danger small mt-1"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">Contraseña</label>
+                                <input type="password" id="pass" class="form-control form-control-glass" placeholder="••••••" required>
+                                <div id="errorPass" class="text-danger small mt-1"></div>
+                            </div>
+                            <button type="submit" class="btn btn-orange text-white w-100 py-2 fw-semibold">
+                                <i class="bi bi-box-arrow-in-right me-2"></i>Entrar
+                            </button>
+                        </form>
+                        <div class="text-center mt-4">
+                            <a href="olvide_password.html" class="text-secondary text-decoration-none d-block mb-2">
+                                <i class="bi bi-question-circle me-1"></i>¿Olvidaste tu contraseña?
+                            </a>
+                            <a href="registro_usuario.html" class="text-secondary text-decoration-none">
+                                ¿No tienes cuenta? <span class="text-warning">Regístrate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>

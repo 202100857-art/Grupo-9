@@ -1,83 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registro de Productos</title>
-<link rel="stylesheet" href="css/styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Producto | Grupo 9</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-auto sidebar p-3">
+                <div class="text-center mb-4">
+                    <i class="bi bi-box-seam fs-1 text-warning"></i>
+                    <h5 class="text-white mt-2">Grupo 9</h5>
+                </div>
+                <nav class="nav flex-column">
+                    <a class="nav-link mb-2" href="index.html">
+                        <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                    </a>
+                    <a class="nav-link active mb-2" href="registro.html">
+                        <i class="bi bi-plus-circle me-2"></i>Registrar Producto
+                    </a>
+                </nav>
+            </div>
 
-<header>
-    <div class="logo">Grupo 9</div>
-</header>
-
-<div class="layout">
-
-<aside class="sidebar">
-    <nav>
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a class="active" href="registro.html">Productos</a></li>
-        </ul>
-    </nav>
-</aside>
-
-<main class="main main-center">
-
-<section class="form-container modern-card">
-    <h1>Nuevo Producto</h1>
-    <p class="form-subtitle">Registra un producto en el sistema</p>
-
-    <div id="mensaje"></div>
-
-    <form id="formRegistro" class="modern-form clean-form">
-
-        <div class="field">
-            <label>Nombre del Producto</label>
-            <input type="text" id="nombre" placeholder="Ej. Laptop HP">
+            <!-- Main Content -->
+            <div class="col p-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card card-glass p-4">
+                            <div class="card-body">
+                                <h3 class="text-white text-center mb-3">
+                                    <i class="bi bi-box-seal text-warning me-2"></i>Nuevo Producto
+                                </h3>
+                                <p class="text-secondary text-center mb-4">Registra un producto en el sistema</p>
+                                <div id="mensaje"></div>
+                                <form id="formRegistro">
+                                    <div class="mb-3">
+                                        <label class="text-secondary">Nombre del Producto</label>
+                                        <input type="text" id="nombre" class="form-control form-control-glass" placeholder="Ej. Laptop HP">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="text-secondary">Tipo</label>
+                                        <input type="text" id="tipo" class="form-control form-control-glass" placeholder="Ej. Electrónica">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="text-secondary">Cantidad</label>
+                                        <input type="number" id="cantidad" class="form-control form-control-glass" placeholder="Ej. 10">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="text-secondary">Costo ($)</label>
+                                        <input type="number" id="costo" class="form-control form-control-glass" placeholder="Ej. 1500">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="text-secondary">En Stock</label>
+                                        <select id="stock" class="form-select form-select-glass">
+                                            <option value="">Seleccionar</option>
+                                            <option value="si">Sí</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-orange text-white w-100 py-2 fw-semibold" id="btnSubmit">
+                                        <i class="bi bi-save me-2"></i>Guardar Producto
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="field">
-            <label>Tipo</label>
-            <input type="text" id="tipo" placeholder="Ej. Electrónica">
-        </div>
-
-        <div class="field">
-            <label>Cantidad</label>
-            <input type="number" id="cantidad" placeholder="Ej. 10">
-        </div>
-
-        <div class="field">
-            <label>Costo ($)</label>
-            <input type="number" id="costo" placeholder="Ej. 1500">
-        </div>
-
-        <div class="field">
-            <label>En Stock</label>
-            <select id="stock">
-                <option value="">Seleccionar</option>
-                <option value="si">Sí</option>
-                <option value="no">No</option>
-            </select>
-        </div>
-
-        <button type="submit" class="btn-modern btn-premium" id="btnSubmit">
-            Guardar Producto
-        </button>
-
-    </form>
-</section>
-
-</main>
-</div>
-
-<footer class="footer">
-    <p>© 2026 Grupo 9</p>
-</footer>
-
-<script src="js/app.js"></script>
-
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
